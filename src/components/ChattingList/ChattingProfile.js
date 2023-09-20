@@ -1,13 +1,15 @@
 import React from "react";
 import { useNavigate } from "react-router";
 import * as S from "../../styles/ChattingList.styled";
-import ChatSet from "../../states/datas/BasicChat";
+// import ChatSet from "../../states/datas/BasicChat";
+// import { useRecoilValue } from "recoil";
+// import { friendsState } from "../../states/atoms/user";
 
-function ChattingProfileBubble({ profile }) {
+function ChattingProfileBubble({ chat }) {
   //파라미터 쓰기
   const navigate = useNavigate();
   function handleProfileBubbleClick() {
-    navigate("/chat-with/" + profile.profileImage);
+    navigate("/chat-with/" + chat.userId);
     // history.push({
     //   pathname: "/chat-with/" + profile.profileImage,
     //   state: { userID: profile.profileImage },
@@ -16,23 +18,23 @@ function ChattingProfileBubble({ profile }) {
   return (
     <S.ProfileBubbleContainer onClick={handleProfileBubbleClick}>
       <S.ProfileImage
-        src={process.env.PUBLIC_URL + "/" + profile.profileImage + ".jpg"}
+        src={process.env.PUBLIC_URL + "/" + chat.userId + ".jpg"}
       />
       <div>
-        <S.ProfileName> {profile.name} </S.ProfileName>
+        <S.ProfileName> {chat.userName} </S.ProfileName>
         <S.LastMessage>
-          {ChatSet[profile.profileImage - 1].messageContext}
+          {chat.chatList[chat.chatList.length - 1].content}
         </S.LastMessage>
       </div>
     </S.ProfileBubbleContainer>
   );
 }
 
-function ChattingProfile({ userProfileSet }) {
+function ChattingProfile({ matchChatSet }) {
   return (
     <div>
-      {userProfileSet.map((profile, id) => (
-        <ChattingProfileBubble profile={profile} key={id} />
+      {matchChatSet.map((chat, id) => (
+        <ChattingProfileBubble chat={chat} key={id} />
       ))}
     </div>
   );

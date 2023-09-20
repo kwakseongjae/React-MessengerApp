@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import { useRecoilValue } from "recoil";
 import { friendsState, userState } from "../../states/atoms/user";
-import { useNavigate } from "react-router-dom";
-import { chattingStateByUserId } from "../../states/atoms/chattings";
-import userProfileSet from "../../states/datas/User";
 import ChattingListTopBar from "../ChattingList/ChattingListTopBar";
 import ProfileOfUsers from "./ProfileOfUsers";
 import ProfileModal from "./ProfileModal";
