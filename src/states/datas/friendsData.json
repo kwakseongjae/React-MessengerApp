@@ -1,34 +1,46 @@
 {
   "users": [
     {
-      "userId": 10,
-      "userName": "박명수",
+      "userId": 2,
+      "userName": "강나연(리드)",
       "profileImage": "2",
-      "statusMessage": "북쪽에 계신 메리메리"
+      "statusMessage": "3학년 FE개발자 ISTP !"
     },
     {
-      "userId": 11,
-      "userName": "데프콘",
+      "userId": 3,
+      "userName": "김나연",
       "profileImage": "3",
-      "statusMessage": ""
+      "statusMessage": "2학년 FE개발자 ENFP !"
     },
     {
-      "userId": 12,
-      "userName": "길성준",
+      "userId": 4,
+      "userName": "박세빈",
       "profileImage": "4",
-      "statusMessage": "나 이런게 무서워하네"
+      "statusMessage": "4학년 FE개발자 ENFJ/ENTJ"
     },
     {
-      "userId": 13,
-      "userName": "정준하",
+      "userId": 5,
+      "userName": "심유진",
       "profileImage": "5",
-      "statusMessage": "웃지마"
+      "statusMessage": "4학년 FE개발자 ISFP/ISTP"
     },
     {
-      "userId": 14,
-      "userName": "유재석",
+      "userId": 6,
+      "userName": "조은정",
       "profileImage": "6",
-      "statusMessage": ""
+      "statusMessage": "4학년 FE개발자 스트리트파이터(?) INTJ"
+    },
+    {
+      "userId": 7,
+      "userName": "최윤창",
+      "profileImage": "7",
+      "statusMessage": "2학년 FE개발자(자유) ISTP"
+    },
+    {
+      "userId": 8,
+      "userName": "홍서현(서브리드)",
+      "profileImage": "8",
+      "statusMessage": "3학년 FE개발자&BE개발자 ISP"
     }
   ]
 }

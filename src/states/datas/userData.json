@@ -1,10 +1,10 @@
 {
     "users": [
       {
-        "userId": 0,
-        "userName": "한규진",
+        "userId": 1,
+        "userName": "곽성재",
         "profileImage": "1",
-        "statusMessage": ""
+        "statusMessage": "리액트 공부는 힘들어 ,,"
       }
     ]
   }

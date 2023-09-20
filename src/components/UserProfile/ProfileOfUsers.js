@@ -19,10 +19,10 @@ function ProfileBubble({ profile, handleModal }) {
   );
 }
 
-function ProfileOfUsers({ userProfile, handleModal }) {
+function ProfileOfUsers({ userProfileSet, handleModal }) {
   return (
     <div>
-      {userProfile.map((profile, id) => (
+      {userProfileSet.map((profile, id) => (
         <ProfileBubble profile={profile} key={id} handleModal={handleModal} />
       ))}
     </div>

@@ -11,11 +11,10 @@ import ProfileModal from "./ProfileModal";
 function ProfileListView() {
   const friendProfile = useRecoilValue(friendsState);
   const myProfile = useRecoilValue(userState);
-  const userProfile = {
-    users: [myProfile["users"], friendProfile["users"]],
-  };
-
-  console.log(myProfile["users"]);
+  const userProfile = [];
+  userProfile.push(myProfile);
+  friendProfile.map((friend) => userProfile.push(friend));
+  
 
   const [matchUserSet, setMatchUserSet] = useState(userProfile);
   const [modalState, setModalState] = useState(false);
@@ -29,7 +28,7 @@ function ProfileListView() {
   function searchUser(searchUserInput) {
     setMatchUserSet([]);
     for (let user of userProfile) {
-      if (user.name.includes(searchUserInput)) {
+      if (user.userName.includes(searchUserInput)) {
         setMatchUserSet((matchUser) => [...matchUser, user]);
       }
     }
