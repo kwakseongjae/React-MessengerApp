@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "../styles/MoreView.styled";
-import userProfileSet from "../states/data/User";
+import userProfileSet from "../states/datas/User";
 
 function MoreView() {
   return (

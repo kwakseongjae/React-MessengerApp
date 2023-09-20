@@ -1,6 +1,6 @@
 import React from "react";
 import * as S from "../../styles/Chatting.styled";
-import userProfileSet from "../../states/data/User";
+import userProfileSet from "../../states/datas/User";
 
 export default function TopBar({ switchUser, currentUser }) {
   function handleProfileImageButtonClick() {

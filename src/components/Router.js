@@ -13,7 +13,6 @@ const Router = () => {
         <Route path="/chat-with/:userID" element={<ChattingView />} />
         <Route path="/more" element={<MoreView />} />
       </Routes>
-      ;
     </>
   );
 };

@@ -1,5 +1,5 @@
 import { atom, selectorFamily } from 'recoil';
-import chattingsData from '../mocks/chattingsData.json';
+import chattingsData from '../datas/chattingsData.json';
 
 export const chattingsState = atom({
   key: 'chattings',

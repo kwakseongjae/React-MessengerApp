@@ -12,17 +12,17 @@ function ProfileBubble({ profile, handleModal }) {
         src={process.env.PUBLIC_URL + "/" + profile.profileImage + ".jpg"}
       />
       <div>
-        <S.UserName> {profile.name} </S.UserName>
-        <S.ProfileMessage>{profile.profileMessage}</S.ProfileMessage>
+        <S.UserName> {profile.userName} </S.UserName>
+        <S.ProfileMessage>{profile.statusMessage}</S.ProfileMessage>
       </div>
     </S.ProfileBubbleContainer>
   );
 }
 
-function ProfileOfUsers({ userProfileSet, handleModal }) {
+function ProfileOfUsers({ userProfile, handleModal }) {
   return (
     <div>
-      {userProfileSet.map((profile, id) => (
+      {userProfile.map((profile, id) => (
         <ProfileBubble profile={profile} key={id} handleModal={handleModal} />
       ))}
     </div>

@@ -1,24 +1,36 @@
 import React, { useState } from "react";
-import userProfileSet from "../../states/data/User";
+import { useRecoilValue } from "recoil";
+import { friendsState, userState } from "../../states/atoms/user";
+import { useNavigate } from "react-router-dom";
+import { chattingStateByUserId } from "../../states/atoms/chattings";
+import userProfileSet from "../../states/datas/User";
 import ChattingListTopBar from "../ChattingList/ChattingListTopBar";
 import ProfileOfUsers from "./ProfileOfUsers";
 import ProfileModal from "./ProfileModal";
 
 function ProfileListView() {
-  const [matchUserSet, setMatchUserSet] = useState(userProfileSet);
-  const [modalState, setModalState] = useState(false);
-  const [detailProfile, setDetailProfile] = useState(userProfileSet[1]);
+  const friendProfile = useRecoilValue(friendsState);
+  const myProfile = useRecoilValue(userState);
+  const userProfile = {
+    users: [myProfile["users"], friendProfile["users"]],
+  };
 
-  function handleModal(profileSelected) {
+  console.log(myProfile["users"]);
+
+  const [matchUserSet, setMatchUserSet] = useState(userProfile);
+  const [modalState, setModalState] = useState(false);
+  const [detailProfile, setDetailProfile] = useState(userProfile[0]);
+
+  function handleModal(selectedProfile) {
     setModalState(!modalState);
-    setDetailProfile(profileSelected);
+    setDetailProfile(selectedProfile);
   }
 
   function searchUser(searchUserInput) {
     setMatchUserSet([]);
-    for (let userProfile of userProfileSet) {
-      if (userProfile.name.includes(searchUserInput)) {
-        setMatchUserSet((matchUser) => [...matchUser, userProfile]);
+    for (let user of userProfile) {
+      if (user.name.includes(searchUserInput)) {
+        setMatchUserSet((matchUser) => [...matchUser, user]);
       }
     }
   }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ChattingProfile from "./ChattingProfile";
 import ChattingListTopBar from "./ChattingListTopBar";
-import userProfileSet from "../../states/data/User";
+import userProfileSet from "../../states/datas/User";
 
 function ChattingList() {
   const [matchUserSet, setMatchUserSet] = useState(userProfileSet);

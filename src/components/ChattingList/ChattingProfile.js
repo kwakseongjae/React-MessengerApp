@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router";
 import * as S from "../../styles/ChattingList.styled";
-import ChatSet from "../../states/data/BasicChat";
+import ChatSet from "../../states/datas/BasicChat";
 
 function ChattingProfileBubble({ profile }) {
   //파라미터 쓰기

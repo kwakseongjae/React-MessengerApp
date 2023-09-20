@@ -14,7 +14,7 @@ const ProfileModal = ({ modalState, setModalState, detailProfile }) => {
       {modalState ? (
         <S.Background ref={modalRef} onClick={closeModal}>
           <S.ModalWrapper modalState={modalState}>
-            <h1>{detailProfile.name}</h1>
+            <h1>{detailProfile.userName}</h1>
             <S.ProfileImage
               src={
                 process.env.PUBLIC_URL +
@@ -24,7 +24,7 @@ const ProfileModal = ({ modalState, setModalState, detailProfile }) => {
               }
               alt=""
             />
-            <p>{detailProfile.profileMessage}</p>
+            <p>{detailProfile.statusMessage}</p>
           </S.ModalWrapper>
         </S.Background>
       ) : null}

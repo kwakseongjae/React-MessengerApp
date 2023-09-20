@@ -4,7 +4,7 @@ import MessageBox from "./MessageBox";
 import MessageInputBar from "./MessageInputBar";
 import * as S from "../../styles/Chatting.styled";
 import { useParams } from "react-router";
-import ChatSet from "../../states/data/BasicChat";
+import ChatSet from "../../states/datas/BasicChat";
 
 
 function ChattingView() {
