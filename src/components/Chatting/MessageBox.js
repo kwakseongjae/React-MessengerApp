@@ -2,17 +2,19 @@ import React, { useEffect } from "react";
 import * as S from "../../styles/Chatting.styled";
 
 function MessageBubble({ chattingMessage }) {
-  console.log(chattingMessage);
+  const chatList = chattingMessage.chatList;
   return (
-    <S.ChattingBubble chattingUser={chattingMessage.userId}>
-      <S.ChattingImage
-        src={process.env.PUBLIC_URL + "/" + chattingMessage.userId + ".jpg"}
-        alt=""
-      />
-      <S.ChattingContext>
-        {chattingMessage.chatList[0].content}
-      </S.ChattingContext>
-    </S.ChattingBubble>
+    <>
+      {chatList.map((chat) => (
+        <S.ChattingBubble chattingUser={chat.userId}>
+          <S.ChattingImage
+            src={process.env.PUBLIC_URL + "/" + chat.userId + ".jpg"}
+            alt=""
+          />
+          <S.ChattingContext>{chat.content}</S.ChattingContext>
+        </S.ChattingBubble>
+      ))}
+    </>
   );
 }
 
