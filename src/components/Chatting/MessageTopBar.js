@@ -1,8 +1,16 @@
 import React from "react";
 import * as S from "../../styles/Chatting.styled";
-import userProfileSet from "../../states/datas/User";
+import { useRecoilValue } from "recoil";
+import { friendsState, userState } from "../../states/atoms/user";
+// import userProfileSet from "../../states/datas/User";
 
 export default function TopBar({ switchUser, currentUser }) {
+  const friendProfile = useRecoilValue(friendsState);
+  const myProfile = useRecoilValue(userState);
+  const userProfile = [];
+  userProfile.push(myProfile);
+  friendProfile.map((friend) => userProfile.push(friend));
+
   function handleProfileImageButtonClick() {
     switchUser();
   }
@@ -15,7 +23,7 @@ export default function TopBar({ switchUser, currentUser }) {
           alt=""
         />
       </S.ProfileImageButton>
-      <S.ProfileName>{userProfileSet[currentUser - 1].name}</S.ProfileName>
+      <S.ProfileName>{userProfile[currentUser - 1].userName}</S.ProfileName>
     </S.TopBox>
   );
 }

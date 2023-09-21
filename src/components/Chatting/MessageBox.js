@@ -2,15 +2,16 @@ import React, { useEffect } from "react";
 import * as S from "../../styles/Chatting.styled";
 
 function MessageBubble({ chattingMessage }) {
+  console.log(chattingMessage);
   return (
-    <S.ChattingBubble chattingUser={chattingMessage.chattingUser}>
+    <S.ChattingBubble chattingUser={chattingMessage.userId}>
       <S.ChattingImage
-        src={
-          process.env.PUBLIC_URL + "/" + chattingMessage.chattingUser + ".jpg"
-        }
+        src={process.env.PUBLIC_URL + "/" + chattingMessage.userId + ".jpg"}
         alt=""
       />
-      <S.ChattingContext>{chattingMessage.messageContext}</S.ChattingContext>
+      <S.ChattingContext>
+        {chattingMessage.chatList[0].content}
+      </S.ChattingContext>
     </S.ChattingBubble>
   );
 }
