@@ -8,38 +8,24 @@
       "chatList": [
         {
           "userId": 2,
-          "content": "인천이",
+          "content": "B612 2기 프론트엔드 리드로 활동하게 된 강나연입니다 ~.~",
           "date": "2022-11-04T22:51:18+09:00",
           "like": false,
           "chatId": "example1"
         },
         {
           "userId": 2,
-          "content": "천안보다 좋다",
+          "content": "검정치마, 실리카겔, 나이트오프, 오아시스, 라디오헤드, 프랭크 오션 등등… 취향 비슷한 분은 연락 주세요 🎧👍🏻",
           "date": "2022-11-04T22:51:25+09:00",
           "like": false,
           "chatId": "example2"
         },
         {
           "userId": 1,
-          "content": "천안분들 어떡해",
+          "content": "5 seconds of summer도 아시나요 ?",
           "date": "2022-11-04T22:52:18+09:00",
           "like": false,
           "chatId": "example3"
-        },
-        {
-          "userId": 1,
-          "content": "천안분들 난리나게...",
-          "date": "2022-11-04T22:52:25+09:00",
-          "like": false,
-          "chatId": "example4"
-        },
-        {
-          "userId": 2,
-          "content": "다시 가!",
-          "date": "2022-11-04T22:52:25+09:00",
-          "like": false,
-          "chatId": "example5"
         }
       ]
     },
@@ -50,25 +36,25 @@
       "userIdList": [1, 3],
       "chatList": [
         {
-          "userId": 1,
-          "content": "형 내일 동묘 가기로 했어요",
+          "userId": 3,
+          "content": "블로그에서 주로 일상을 공유하고 있어요",
           "date": "2022-11-03T22:11:18+09:00",
           "like": false,
-          "chatId": "example6"
+          "chatId": "example4"
         },
         {
           "userId": 3,
-          "content": "쓰~읍 난 좀 반댄데?",
+          "content": "나중에 편하게 블로그 주소 물어봐주세요!!",
           "date": "2022-11-03T22:12:23+09:00",
           "like": false,
-          "chatId": "example7"
+          "chatId": "example5"
         },
         {
           "userId": 1,
-          "content": "왜요?",
+          "content": "모각글 해주세요 ,, 🥲",
           "date": "2022-11-03T22:12:23+09:00",
           "like": false,
-          "chatId": "example8"
+          "chatId": "example6"
         }
       ]
     },
@@ -79,25 +65,18 @@
       "userIdList": [1, 4],
       "chatList": [
         {
-          "userId": 1,
-          "content": "가장 감명깊게 읽은 책 한번 얘기해봐요",
+          "userId": 4,
+          "content": "형원 셔누 유닛으로 컴백했으니 많관부",
           "date": "2022-05-11T22:11:18+09:00",
           "like": false,
-          "chatId": "example9"
-        },
-        {
-          "userId": 4,
-          "content": "돈키호테입니다",
-          "date": "2022-05-11T22:12:23+09:00",
-          "like": false,
-          "chatId": "example10"
+          "chatId": "example7"
         },
         {
           "userId": 1,
-          "content": "돈키호테 저자가 누구죠?",
-          "date": "2022-05-11T22:12:40+09:00",
+          "content": "많관부 ~.~",
+          "date": "2022-05-11T22:12:23+09:00",
           "like": false,
-          "chatId": "example11"
+          "chatId": "example8"
         }
       ]
     },
@@ -108,25 +87,25 @@
       "userIdList": [1, 5],
       "chatList": [
         {
-          "userId": 1,
-          "content": "아부지 뭐하시노 너는",
+          "userId": 5,
+          "content": "저는 요새 방탈출 다니는걸 좋아합니다 !",
           "date": "2022-05-11T23:25:18+09:00",
           "like": false,
-          "chatId": "example12"
+          "chatId": "example9"
         },
         {
           "userId": 5,
-          "content": "아버지.. 누워계십니다",
+          "content": "방탈출 관심 있으신분 연락 환영입니당^_^ ",
           "date": "2022-05-11T23:26:23+09:00",
           "like": false,
-          "chatId": "example13"
+          "chatId": "example10"
         },
         {
           "userId": 1,
-          "content": "왜??",
+          "content": "방탈출,,, 탈출해본적이 없네요 ,, ㅠ",
           "date": "2022-05-11T23:26:40+09:00",
           "like": false,
-          "chatId": "example14"
+          "chatId": "example11"
         }
       ]
     },
@@ -138,24 +117,89 @@
       "chatList": [
         {
           "userId": 6,
-          "content": "What's your name?",
+          "content": "복싱 다니고 있어요",
           "date": "2022-05-12T02:10:18+09:00",
           "like": false,
           "chatId": "example12"
         },
         {
-          "userId": 1,
-          "content": "스테파니",
+          "userId": 6,
+          "content": "게임 좋아해요… 안 하는 게임이 없는 듯",
           "date": "2022-05-12T02:10:23+09:00",
           "like": false,
           "chatId": "example13"
         },
         {
           "userId": 6,
-          "content": "싸브레??",
+          "content": "요즘은 스트리트파이터를 열심히 하고 있습니다",
           "date": "2022-05-12T02:11:40+09:00",
           "like": false,
           "chatId": "example14"
+        },
+        {
+          "userId": 1,
+          "content": "저는 철권은 조금 칩니다 ..!",
+          "date": "2022-05-12T02:11:55+09:00",
+          "like": false,
+          "chatId": "example15"
+        }
+      ]
+    },
+    {
+      "chattingId": 5,
+      "userName": "최윤창",
+      "userId": 7,
+      "userIdList": [1, 7],
+      "chatList": [
+        {
+          "userId": 7,
+          "content": "요새 야구 보는 재미에 빠져있습니다!!",
+          "date": "2022-05-12T02:10:18+09:00",
+          "like": false,
+          "chatId": "example16"
+        },
+        {
+          "userId": 7,
+          "content": "혹시 야구 좋아하시는 분들 있으면 같이 야구 보러가요~!! ",
+          "date": "2022-05-12T02:10:23+09:00",
+          "like": false,
+          "chatId": "example17"
+        },
+        {
+          "userId": 1,
+          "content": "저는 오타니, 트라웃밖에 모릅니당 ,,",
+          "date": "2022-05-12T02:11:40+09:00",
+          "like": false,
+          "chatId": "example18"
+        }
+      ]
+    },
+    {
+      "chattingId": 4,
+      "userName": "홍서현",
+      "userId": 8,
+      "userIdList": [1, 8],
+      "chatList": [
+        {
+          "userId": 8,
+          "content": "어쩌다보니까 프론트 서브 리드가 된 컴공 3학년 홍서현입니다.",
+          "date": "2022-05-12T02:10:18+09:00",
+          "like": false,
+          "chatId": "example19"
+        },
+        {
+          "userId": 8,
+          "content": "저는 저희 집 강아지를 제일 좋아한답니다.",
+          "date": "2022-05-12T02:10:23+09:00",
+          "like": false,
+          "chatId": "example20"
+        },
+        {
+          "userId": 1,
+          "content": "사진 종종 기대하겠습니다 😎",
+          "date": "2022-05-12T02:11:40+09:00",
+          "like": false,
+          "chatId": "example21"
         }
       ]
     }
