@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useRecoilValue, useRecoilState } from "recoil";
+import { useRecoilValue } from "recoil";
 import * as S from "../../styles/Chatting.styled";
 import { useParams } from "react-router";
 import { chattingsState } from "../../states/atoms/chattings";
@@ -10,6 +10,7 @@ import MessageBox from "./MessageBox";
 import MessageInputBar from "./MessageInputBar";
 
 function ChattingView() {
+  // const [chattings, setChattings] = useRecoilState(chattingsState);
   const chattings = useRecoilValue(chattingsState);
   let { userID } = useParams();
   const [isMe, setIsMe] = useState(true);
