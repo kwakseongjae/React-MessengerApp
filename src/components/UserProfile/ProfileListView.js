@@ -12,8 +12,6 @@ function ProfileListView() {
   userProfile.push(myProfile);
   friendProfile.map((friend) => userProfile.push(friend));
 
-  console.log(userProfile);
-
   const [matchUserSet, setMatchUserSet] = useState(userProfile);
   const [modalState, setModalState] = useState(false);
   const [detailProfile, setDetailProfile] = useState(userProfile[0]);

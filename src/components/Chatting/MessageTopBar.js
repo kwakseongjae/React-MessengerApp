@@ -2,7 +2,6 @@ import React from "react";
 import * as S from "../../styles/Chatting.styled";
 import { useRecoilValue } from "recoil";
 import { friendsState, userState } from "../../states/atoms/user";
-// import userProfileSet from "../../states/datas/User";
 
 export default function TopBar({ switchUser, currentUser }) {
   const friendProfile = useRecoilValue(friendsState);

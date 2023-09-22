@@ -9,6 +9,7 @@ const ProfileModal = ({ modalState, setModalState, detailProfile }) => {
       setModalState(!modalState);
     }
   }
+  
   return (
     <>
       {modalState ? (
