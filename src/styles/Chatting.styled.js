@@ -14,6 +14,8 @@ export const ChattingImage = styled.img`
   border-radius: 70%;
   overflow: hidden;
   margin: 15px 15px 0px 15px;
+
+  flex-shrink: 0;
 `;
 
 export const ChattingContext = styled.div`
