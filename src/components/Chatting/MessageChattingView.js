@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useRecoilValue } from "recoil";
+import React, { useState, useEffect } from "react";
+import { useRecoilValue, useRecoilState } from "recoil";
 import * as S from "../../styles/Chatting.styled";
 import { useParams } from "react-router";
 import { chattingsState } from "../../states/atoms/chattings";
@@ -10,8 +10,7 @@ import MessageBox from "./MessageBox";
 import MessageInputBar from "./MessageInputBar";
 
 function ChattingView() {
-  // const [chattings, setChattings] = useRecoilState(chattingsState);
-  const chattings = useRecoilValue(chattingsState);
+  const [chattings, setChattings] = useRecoilState(chattingsState);
   let { userID } = useParams();
   const [isMe, setIsMe] = useState(true);
   const currentUser = isMe ? 1 : userID;
@@ -19,13 +18,19 @@ function ChattingView() {
     chattings[userID - 2],
   ]);
 
+  useEffect(() => {
+    const tempChattings = [...chattings];
+    tempChattings.splice(userID - 2, 1, ...userChattingMessageSet);
+    setChattings(tempChattings);
+  }, [userChattingMessageSet]);
+
   function switchUser() {
     setIsMe(!isMe);
   }
 
   function clickInputButton(messageUserInput) {
     const newChat = {
-      userId: currentUser,
+      userId: parseInt(currentUser),
       content: messageUserInput,
       date: dayjs().format(),
       like: false,

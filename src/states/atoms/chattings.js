@@ -1,11 +1,11 @@
 import { atom, selectorFamily } from "recoil";
 import chattingsData from "../datas/chattingsData.json";
-// import { localStorageEffect } from "../../utilities/localStorage";
+import { localStorageEffect } from "../../utilities/localStorage";
 
 export const chattingsState = atom({
   key: "chattings",
   default: chattingsData.chattings,
-  // effects: [localStorageEffect("chattings")],
+  effects: [localStorageEffect("chattings")],
 });
 
 export const chattingStateByChattingId = selectorFamily({
