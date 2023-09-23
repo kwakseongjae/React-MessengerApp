@@ -21,7 +21,7 @@ function ProfileListView() {
     setDetailProfile(selectedProfile);
   }
 
-  function searchUser(searchUserInput) {
+  function searchItem(searchUserInput) {
     setMatchUserSet([]);
     for (let user of userProfile) {
       if (user.userName.includes(searchUserInput)) {
@@ -37,7 +37,7 @@ function ProfileListView() {
         setModalState={setModalState}
         detailProfile={detailProfile}
       />
-      <ChattingListTopBar searchUser={searchUser} viewTitle={"친구"} />
+      <ChattingListTopBar searchItem={searchItem} viewTitle={"친구"} />
       <ProfileOfUsers userProfileSet={matchUserSet} handleModal={handleModal} />
     </div>
   );

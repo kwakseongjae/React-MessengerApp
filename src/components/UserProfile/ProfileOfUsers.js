@@ -5,7 +5,7 @@ function ProfileBubble({ profile, handleModal }) {
   function profileClicked() {
     handleModal(profile);
   }
-  
+
   return (
     <S.ProfileBubbleContainer onClick={profileClicked}>
       <S.ProfileImg

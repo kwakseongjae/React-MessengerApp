@@ -9,18 +9,18 @@ function ChattingList() {
   const chattingList = [chattings];
   const [matchChatSet, setMatchChatSet] = useState(chattingList[0]);
 
-  function searchChat(searchChatInput) {
+  function searchItem(searchChatInput) {
     setMatchChatSet([]);
-    chattings.map((chat) => {
-      if (chat.userName === searchChatInput) {
+    for (let chat of chattings) {
+      if (chat.userName.includes(searchChatInput)) {
         setMatchChatSet((matchChat) => [...matchChat, chat]);
       }
-    });
+    }
   }
 
   return (
     <div>
-      <ChattingListTopBar searchChat={searchChat} viewTitle={"채팅"} />
+      <ChattingListTopBar searchItem={searchItem} viewTitle={"채팅"} />
       <ChattingProfile matchChatSet={matchChatSet} />
     </div>
   );
