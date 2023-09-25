@@ -12,6 +12,16 @@ function ChattingListTopBar({ searchItem, viewTitle }) {
     setSearchChatInput(e.target.value);
   }
 
+  document.addEventListener(
+    "keydown",
+    function (event) {
+      if (event.key === "Enter") {
+        event.preventDefault();
+      }
+    },
+    true
+  );
+  
   return (
     <S.ChattingListContainer>
       <h1>{viewTitle}</h1>
