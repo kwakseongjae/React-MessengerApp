@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { useRecoilValue } from "recoil";
-import { chattingsState } from "../../states/atoms/chattings";
-import ChattingProfile from "./ChattingProfile";
-import ChattingListTopBar from "./ChattingListTopBar";
+import { chattingsState } from "../states/atoms/chattings";
+import ChattingProfile from "../components/ChattingList/ChattingProfile";
+import ChattingListTopBar from "../components/ChattingList/ChattingListTopBar";
 
 function ChattingList() {
   const chattings = useRecoilValue(chattingsState);
-  const chattingList = [chattings];
-  const [matchChatSet, setMatchChatSet] = useState(chattingList[0]);
+  const [matchChatSet, setMatchChatSet] = useState(chattings);
 
   function searchItem(searchChatInput) {
     setMatchChatSet([]);

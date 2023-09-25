@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useRecoilValue } from "recoil";
-import { friendsState, userState } from "../../states/atoms/user";
-import ChattingListTopBar from "../ChattingList/ChattingListTopBar";
-import ProfileOfUsers from "./ProfileOfUsers";
-import ProfileModal from "./ProfileModal";
+import { friendsState, userState } from "../states/atoms/user";
+import ChattingListTopBar from "../components/ChattingList/ChattingListTopBar";
+import ProfileOfUsers from "../components/UserProfile/ProfileOfUsers";
+import ProfileModal from "../components/UserProfile/ProfileModal";
 
-function ProfileListView() {
+function UserProfile() {
   const friendProfile = useRecoilValue(friendsState);
   const myProfile = useRecoilValue(userState);
   const userProfile = [];
@@ -43,4 +43,4 @@ function ProfileListView() {
   );
 }
 
-export default ProfileListView;
+export default UserProfile;

@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
-import { useRecoilValue, useRecoilState } from "recoil";
-import * as S from "../../styles/Chatting.styled";
+import { useRecoilState } from "recoil";
+import * as S from "../styles/Chatting.styled";
 import { useParams } from "react-router";
-import { chattingsState } from "../../states/atoms/chattings";
+import { chattingsState } from "../states/atoms/chattings";
 import dayjs from "dayjs";
 import { v4 as uuid } from "uuid";
-import TopBar from "./MessageTopBar";
-import MessageBox from "./MessageBox";
-import MessageInputBar from "./MessageInputBar";
+import TopBar from "../components/Chatting/MessageTopBar";
+import MessageBox from "../components/Chatting/MessageBox";
+import MessageInputBar from "../components/Chatting/MessageInputBar";
 
-function ChattingView() {
+function Chatting() {
   const [chattings, setChattings] = useRecoilState(chattingsState);
-  let { userID } = useParams();
+  const { userID } = useParams();
   const [isMe, setIsMe] = useState(true);
   const currentUser = isMe ? 1 : userID;
   const [userChattingMessageSet, setUserChattingMessageSet] = useState([
@@ -54,4 +54,4 @@ function ChattingView() {
   );
 }
 
-export default ChattingView;
+export default Chatting;
